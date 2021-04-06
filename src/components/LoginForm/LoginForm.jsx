@@ -13,7 +13,7 @@ const LoginForm = () => {
     const [passwordValue, setPassword] = useState('');
     const [isError, setError] = useState(false);
 
-    const errorClasses = isError ? 'errorMessage' : 'hidden';
+    const errorClasses = isError ? 'errorMessage' : 'nonDisplayed';
 
     const updateName = (event) => {
         const { value } = event.target;
@@ -33,15 +33,19 @@ const LoginForm = () => {
 
     return (
         <div clasName='loginWrapper'>
+            <div className='loginContent'>
             <h1>Login</h1>
             <p className={errorClasses}>Name and password do not match</p>
-            <form>
-                <label htmlFor='Name'>Name</label>
+            <form className='formWrapper'>
+                <label htmlFor='Name' className={nameValue == '' ? 'hidden' : 'label'}>Name</label>
                 <input type='text' id='Name' placeholder='Name' value={nameValue} onChange={updateName}></input>
-                <label htmlFor='Password'>Password</label>
+                <label htmlFor='Password' className={passwordValue == '' ? 'hidden' : 'label'}>Password</label>
                 <input type='password' id='Password' placeholder='Password' value={passwordValue} onChange={updatePassword}/>
-            </form>
-            <button onClick={onLogin}>Next</button>
+            </form> 
+            </div>
+            <div className='buttonWrapper'>
+                <button onClick={onLogin}>Next</button>    
+            </div>    
         </div>
     );
 }

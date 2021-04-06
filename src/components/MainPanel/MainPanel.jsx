@@ -10,10 +10,12 @@ const MainPanel = () => {
     const history = useHistory();
 
     return (
-        <div>
+        <div className='mainWrapper'>
             {!isLogged && history.push('./')}
-            <h1>Success</h1>
-            <p>Logged in as <b>{user[0].name}</b></p>
+            <div>
+                <h1>Success</h1>
+                <p>Logged in as <b>{user[0].name}</b></p>
+            </div>    
         </div>
     );
 }

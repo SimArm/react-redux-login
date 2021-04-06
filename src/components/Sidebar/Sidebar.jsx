@@ -6,8 +6,11 @@ import switchImage from '../../constants/image.png';
 const Sidebar = () => {
     return (
         <div className='sidebarWrapper'>
-            <div><img src={logo} alt='Logo'/></div>
-            <div><img src={switchImage} alt='switch image' /></div>
+            <div className='imagesWrapper column'>
+                <div><img src={logo} alt='Logo'/></div>
+                <div className='switchImage'><img src={switchImage} alt='switch image' /></div>
+            </div>
+            <span className='fadeLine column'></span>
         </div>
     );
 }

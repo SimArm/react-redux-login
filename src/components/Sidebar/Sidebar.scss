@@ -1,0 +1,32 @@
+.column {
+    float: left;
+}
+
+.imagesWrapper { 
+    width: auto;
+    height: 95vh;
+}
+
+.fadeLine {
+    display:block;
+    border:none;
+    color:white;
+    width:1px;
+    height: 90vh;
+    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 350, from(rgba(175, 175, 175, 0.664)), to(#fff));
+}
+
+.switchImage {
+    display: flex;
+    align-items: center;
+    height: 80%;
+}
+
+@media screen and (max-width: 768px) {
+    .fadeLine, .switchImage{
+        display: none;
+    }
+    .imagesWrapper {
+        height: auto;
+    }
+}

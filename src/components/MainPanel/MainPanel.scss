@@ -1,0 +1,26 @@
+.mainWrapper {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 40px;
+}
+
+h1 {
+    margin: 0;
+}
+
+p { 
+    margin: 0;
+    color: gray;
+}
+
+@media screen and (max-width: 768px) {
+    .mainWrapper {
+        display: flex;
+        align-items: center;
+        padding-left: 0;
+        height: 80vh;
+        width: 100%;
+    }
+}

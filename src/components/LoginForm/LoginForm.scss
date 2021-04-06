@@ -1,3 +1,93 @@
-.hidden { 
+.nonDisplayed { 
     display: none;
+}
+
+.loginWrapper{
+    height: 95vh;
+}
+
+.loginContent {
+    padding-left: 40px;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.formWrapper {
+    height: 112.4px; 
+    > *{
+    display: block;
+    }
+}
+
+.errorMessage {
+    color: red;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.label {
+    font-size: 12px;
+    color: gray;
+}
+
+h1 { 
+    margin-bottom: 5px;
+}
+
+input {
+    outline: 0;
+    border-width: 0 0 1px;
+    width: 380px;
+    margin-bottom: 15px;
+    padding-top: 5px;
+    color: rgb(83, 83, 83);
+}
+
+input:focus {
+    border-width: 0 0 2px;
+    border-color: #006fff;
+}
+
+button {
+    color: #006fff;
+    background-color: rgb(219, 239, 255);
+    border: none;
+    padding: 7px 38px ;  
+    border-radius: 4px;
+    margin-left: 40px;
+}
+
+@media screen and (max-width: 900px) {
+    input {
+        width: 250px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .loginContent { 
+        align-items: center;
+        padding-left: 0;
+        height: 80vh;
+        width: 100%;
+    }
+    input {
+        width: 300px;
+    }
+    .buttonWrapper {
+        display: flex;
+        justify-content: center;
+        button {
+            margin-left: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    input {
+        width: auto;
+    }
 }
