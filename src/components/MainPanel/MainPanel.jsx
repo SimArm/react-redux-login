@@ -1,10 +1,10 @@
-import React from './react';
+import React from 'react';
 import './MainPanel.scss';
 
 const MainPanel = () => {
     return (
         <div>
-            <h>Succss</h>
+            <h1>Success</h1>
             <p>Logged in as <b>{'Name'}</b></p>
         </div>
     );
