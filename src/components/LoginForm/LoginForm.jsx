@@ -1,19 +1,19 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
+import { signedIn } from '../../actions';
 import './LoginForm.scss';
 
 const LoginForm = () => {
     const user = useSelector(state => state.Users);
-    const isLogged = useSelector(state => state.isLogged);
+    const dispatch = useDispatch();
+    const history = useHistory();
 
     const [nameValue, setName] = useState('');
     const [passwordValue, setPassword] = useState('');
     const [isError, setError] = useState(false);
 
     const errorClasses = isError ? 'errorMessage' : 'hidden';
-
-    const history = useHistory();
 
     const updateName = (event) => {
         const { value } = event.target;
@@ -27,7 +27,7 @@ const LoginForm = () => {
 
     const onLogin = () => {
         nameValue === user[0].name && passwordValue === user[0].password ?
-        history.push('./home')
+        dispatch(signedIn()) && history.push('./home')
         : setError(true);
     }
 
